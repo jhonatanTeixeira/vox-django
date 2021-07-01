@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "vox-django"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["Jhonatan Teixeira <jhonatan.teixeira@gmail.com>"]
 
@@ -9,14 +9,14 @@ python = "^3.8"
 sqlalchemy = "==1.3.21"
 sqlalchemy-easy-profile = "^1.2.0"
 pycryptodome = "*"
-django = "*"
+django = ">=3.0,<3.1"
 django-sorcery = "*"
-sqlalchemy-schemadisplay = "*"
-sqlalchemy-pagination = "*"
-django-health-check = "*"
 djangorestframework = ">=3.11,<3.12"
+django-health-check = "*"
 django-rest-witchcraft = "*"
 django-cors-headers = "*"
+sqlalchemy-schemadisplay = "*"
+sqlalchemy-pagination = "*"
 drf-yasg = "*"
 python-dotenv = "*"
 
