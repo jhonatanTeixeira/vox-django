@@ -27,7 +27,7 @@ def build(c):
     clean(c)
     install_dependencies(c)
     test(c)
-    c.run('pipenv run python setup.py sdist bdist_wheel')
+    c.run('poetry build')
 
 
 @task
@@ -49,5 +49,4 @@ def quality_gate(c, runner_home='$SONAR_RUNNER_HOME', name='${name}', sonar_url=
 
 @task
 def deploy(c, repo_name='pypi'):
-    c.run(f'poetry build')
     c.run('poetry publish')

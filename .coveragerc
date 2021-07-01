@@ -1,0 +1,11 @@
+[run]
+source = ./
+
+[report]
+omit =
+    app/*
+    **/tests.py
+    manage.py
+    tasks.py
+    **/apps.py
+    vox_django/test_runner.py
