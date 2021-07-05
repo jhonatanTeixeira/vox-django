@@ -28,5 +28,4 @@ class SqlAlchemyProfilerMiddleware:
 
 class ExceptionMiddleware(MiddlewareMixin):
     def process_exception(self, request, error):
-        logging.getLogger('django').error(error, extra={"appName": settings.APP_NAME,
-                                                        "appVersion": "1.0.0"})
+        logging.getLogger('django').error(error, stack_info=True, extra={'request': request})

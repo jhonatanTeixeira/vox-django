@@ -58,8 +58,7 @@ class TestMiddleware(TestCase):
         middlwware = ExceptionMiddleware()
         middlwware.process_exception(request={}, error='some error')
 
-        getLogger().error.assert_called_with('some error', extra={"appName": settings.APP_NAME,
-                                                                  "appVersion": "1.0.0"})
+        getLogger().error.assert_called_with('some error', stack_info=True, extra={'request': {}})
 
 
 class TestModels(TestCase):
